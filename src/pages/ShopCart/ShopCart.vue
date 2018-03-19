@@ -1,6 +1,6 @@
 <template>
 <div>
-  ShooCart
+  ShopCart
 </div>
 </template>
 
