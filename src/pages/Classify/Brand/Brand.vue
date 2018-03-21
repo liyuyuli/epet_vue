@@ -1,0 +1,119 @@
+<template>
+  <div class="tab2">
+    <div class="tab2_title">
+      <span>—推荐品牌—</span>
+    </div>
+    <div class="tab2_list">
+      <ul class="tab2_cont">
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+        <li class="loading_img">
+          <div class="tab2_loading">
+            <img src="../3b236d1731bd91004bffcec3515e1a0a.jpg" alt="">
+          </div>
+          <p>冠能</p>
+          <p>美国</p>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {}
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+  @import "../../../common/stylus/mixins.styl"
+  .tab2
+    width 100%
+    .tab2_title
+      width 100%
+      text-align center
+      font-size 12px
+      color #999
+      padding 20px 0
+    .tab2_list
+      width 100%
+      .tab2_cont
+        width 100%
+        display flex
+        flex-wrap wrap
+        justify-content space-around
+        .loading_img
+          font-size 12px
+          text-align center
+          padding-bottom 20px
+
+
+      //padding 10px 20px
+
+      //margin-left 5px
+      //box-sizing border-box
+
+      .tab2_loading
+        border 1px solid #e2e2e2
+        padding 10px 20px
+        img
+          height 40px
+          display block
+          line-height 40px
+          vertical-align middle
+</style>

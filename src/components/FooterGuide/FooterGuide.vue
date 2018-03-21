@@ -42,10 +42,11 @@
   .footer_guide  //footer
     top-border-1px(#e4e4e4)
     position fixed
-    z-index 100
+    z-index 200
     left 0
     right 0
     bottom 0
+    margin-top 46px
     background-color #fff
     width 100%
     height 46px
