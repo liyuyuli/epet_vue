@@ -9,6 +9,9 @@ import Profile from '../pages/Profile/Profile'
 import ShopCart from '../pages/ShopCart/ShopCart'
 import Assortment from '../pages/Classify/Assortment/Assortment'
 import Brand from '../pages/Classify/Brand/Brand'
+import Total from '../pages/Total/Total'
+import Password from '../pages/Profile/Password/Password'
+import Mobile from '../pages/Profile/Mobile/Mobile'
 
 export  default new VueRouter({
   routes:[
@@ -38,8 +41,15 @@ export  default new VueRouter({
       meta:{
         showFooter:true
       }},
-    {path:'/profile',component:Profile},
-    {path:'/shopcart',component:ShopCart}
+    {path:'/profile',component:Profile,
+      children:[
+        {path:'/profile/password',component:Password},
+        {path:'/profile/mobile',component:Mobile},
+        {path:'/',redirect:'/profile/password'}
+      ]
+    },
+    {path:'/shopcart',component:ShopCart},
+    {path:'/total',component:Total}
 
 
     ]

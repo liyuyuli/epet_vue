@@ -3,8 +3,7 @@
 <!--头部-->
 
   <div class="header_tip" >
-
-     <span @click="goto('/classify/brand')">
+      <span @click="goto('/classify/brand')">
        <i class="iconfont icon-j123"></i>
      </span>
       <span>购物车</span>
@@ -53,9 +52,20 @@
 
 <script>
   export default {
+      name:'wap_top',
+    data(){
+        return{
+          showDetail:false
+        }
+
+  },
     methods:{
       goto(path){
         this.$router.replace(path)
+
+      },
+      toggleShow(){
+       this.showDetail = !this.showDetail
       }
     }
   }

@@ -53,6 +53,22 @@
           </li>
         </ul>
       </div>
+      <div class="box2">
+        <a href="">
+          热门品牌
+        </a>
+        <img src="./cate_right_img.png" alt="" class="t1">
+        <ul class="box3">
+          <li>
+            <img src="./7e157e3b5b1303aa4a4107f76ddab4cd.jpg" alt="">
+            <p>海洋之星Fish4Dogs</p>
+          </li>
+          <li>
+            <img src="./16b0a6dd2bc28ee4809ac8945bc8f282.jpg" alt="">
+            <p>海洋之星Fish4Dogs</p>
+          </li>
+        </ul>
+      </div>
     </div>
 
   </div>
@@ -90,10 +106,10 @@
     .rightbox
       height 100%
       margin-left 100px
-      position fixed
+      position relative
       .box1
         padding 5px 5px 20px
-        height 100%
+        position absolute
         a
           font-size 12px
         .boxs
@@ -106,4 +122,24 @@
               display block
               height 80px
               width 80px
+      .box2
+        position absolute
+        top 230px
+
+        a
+         font-size 12px
+
+        .t1
+          height 10px
+          margin-left 200px
+
+        .box3
+          text-align center
+          display flex
+          justify-content space-around
+          margin-top 20px
+          img
+            height 45px
+            width 80px
+            padding 5px 5px 20px
 </style>

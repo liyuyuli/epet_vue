@@ -27,13 +27,15 @@
     <div class="index_bottom swiper-container" id="index_bottom">
       <div class="index_content swiper-wrapper">
         <ul class="index_list swiper-slide">
-          <li class="on">首页</li>
-          <li>狗狗主粮</li>
+          {{}}
+          <li class="on" v-for="(menu,index) in menus" :key="index">{{menu.menu_name}}</li>
+          <!--<li>狗狗主粮</li>
           <li>服饰城</li>
           <li>医疗保健</li>
           <li>零食玩具</li>
           <li>日用外出</li>
-          <li>美容香波</li>
+          <li>美容香波</li>-->
+
         </ul>
       </div>
     </div>
@@ -406,6 +408,7 @@
 <script>
   import Swiper from 'swiper'
   import Rush from '../../components/Rush/Rush'
+  import {mapState} from 'vuex'
 
   import 'swiper/dist/css/swiper.min.css'
   export default {
@@ -443,10 +446,17 @@
         }
       })
 
+
+    //  通知action异步获取homepage
+      this.$store.dispatch('getShopNav')
+
     },
     components:{
       Rush,
 
+    },
+    computed:{
+      ...mapState(['menus'])
     }
   }
 </script>
