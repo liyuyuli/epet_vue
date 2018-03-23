@@ -19,19 +19,15 @@
 </div>
 </template>
 <script>
-  import Swiper from 'swiper'
-  import 'swiper/dist/css/swiper.min.css'
+
   import ShopList from '../../components/ShopList/ShopList'
 
   export default {
+
     mounted(){
-      new Swiper('.ff1>#list',{
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode:false,
-        spaceBetween: 10,
-        // mousewheel: true,
-      })
+      this.$store.dispatch('getCategorys')
+
+
     },
     components:{
       ShopList

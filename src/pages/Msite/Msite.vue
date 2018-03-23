@@ -24,18 +24,19 @@
       </div>
     </div>
     <!--导航条-->
-    <div class="index_bottom swiper-container" id="index_bottom">
-      <div class="index_content swiper-wrapper">
-        <ul class="index_list swiper-slide">
-          {{}}
-          <li class="on" v-for="(menu,index) in menus" :key="index">{{menu.menu_name}}</li>
+    <div class="index_bottom " >
+      <div class="index_content swiper-container" id="index_bottom">
+        <ul class="index_list swiper-wrapper">
+          <li  class="swiper-slide "
+               v-for="(menu,index) in homepages.menus"
+               :key="index"
+               :class="{on:index === currentIndex}"  @click="setCurrentIndex(index)">{{menu.menu_name}}</li>
           <!--<li>狗狗主粮</li>
           <li>服饰城</li>
           <li>医疗保健</li>
           <li>零食玩具</li>
           <li>日用外出</li>
           <li>美容香波</li>-->
-
         </ul>
       </div>
     </div>
@@ -398,9 +399,6 @@
         <span>© wap.epet.com 版权：重庆易宠科技有限公司</span>
       </div>
     </div>
-
-
-
   </div>
 </div>
 </template>
@@ -412,6 +410,16 @@
 
   import 'swiper/dist/css/swiper.min.css'
   export default {
+    data(){
+      return{
+        currentIndex : 0
+      }
+    },
+    methods:{
+      setCurrentIndex(index){
+        this.currentIndex = index
+      }
+    },
     mounted(){
       new Swiper('.swiper-content>.swiper-container', {
         loop: true,
@@ -429,10 +437,7 @@
         slidesPerView: 3.5,
         spaceBetween: 10,
       })
-      new  Swiper('#index_bottom',{
-        slidesPerView:6,
-        spaceBetween: 8
-      })
+
       new Swiper('#banner_item',{
         loop: true,
         // slidesPerView: 3.5,
@@ -448,7 +453,14 @@
 
 
     //  通知action异步获取homepage
-      this.$store.dispatch('getShopNav')
+      this.$store.dispatch('getShopNav',()=>{
+        this.$nextTick(()=>{
+          new  Swiper('#index_bottom',{
+            slidesPerView:5,
+            spaceBetween: 8
+          })
+        })
+      })
 
     },
     components:{
@@ -456,7 +468,7 @@
 
     },
     computed:{
-      ...mapState(['menus'])
+      ...mapState(['homepages'])
     }
   }
 </script>

@@ -28,14 +28,63 @@
       </div>
     </div>
   </transition>
-  <div class="content">
-    <h2>A</h2>
-    <div></div>
+  <div class="allBrand">
+    <div class="content" v-for="(c,index) in allbrands.brand" :key="index">
+      <h2>{{c.order}}</h2>
+      <div class="a4" v-for="(a,index) in c.list" :key="index">
+        <div class="a1">
+          <img :src="a.logo" alt="" class="a3">
+        </div>
+        <div class="a2">
+          <p class="ft1">艾尔</p>
+          <p class="ft2">中国</p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="aa">
+        <ul class="a1">
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+          <li>D</li>
+          <li>E</li>
+          <li>F</li>
+          <li>G</li>
+          <li>H</li>
+          <li>I</li>
+          <li>J</li>
+          <li>K</li>
+          <li>L</li>
+          <li>M</li>
+          <li>N</li>
+          <li>O</li>
+          <li>P</li>
+          <li>Q</li>
+          <li>R</li>
+          <li>S</li>
+          <li>T</li>
+          <li>U</li>
+          <li>V</li>
+          <li>W</li>
+          <li>X</li>
+          <li>Y</li>
+          <li>Z</li>
+        </ul>
+      </div>
+
+
+
   </div>
+
 </div>
 </template>
 
 <script>
+  import {mapState} from 'vuex'
   export default {
 
     data(){
@@ -48,6 +97,12 @@
       toggleShow(){
         this.showDetail = !this.showDetail
       }
+    },
+    mounted(){
+      this.$store.dispatch('getAllBrands')
+    },
+    computed:{
+      ...mapState(['allbrands'])
     }
   }
 </script>
@@ -109,11 +164,43 @@
 
 
 
+  .allBrand
+    width 100%
     .content
       width 100%
+
       h2
-        background #999
+        background #f3f4f5
         height 24px
         line-height 24px
         margin-top -8px
+      .a4
+        display flex
+        border-bottom 1px solid #f3f4f5
+      .a1
+        border 1px solid #7e8c8d
+        margin 10px 10px
+
+        .a3
+          display block
+          height 40px
+          margin 0 auto
+
+      .a2
+
+        margin-top 15px
+
+        .ft1
+          font-size 14px
+          margin-bottom 5px
+        .ft2
+          font-size 12px
+
+
+
+    .aa
+      position fixed
+      right 5px
+      top 150px
+
 </style>

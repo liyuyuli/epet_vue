@@ -1,8 +1,6 @@
 import ajax from './ajax'
 //
 
-
-
 /*
 //4.获取一次性验证码
 export const reqCaptcha =()=>ajax('/api/captcha')
@@ -27,4 +25,10 @@ export const reqShopNav =()=>ajax('/homepage')
 export const reqCategorys =()=>ajax('/categorys')
 
 //获取全部品牌的数据
-export const reqBrands =()=>ajax('/allbrands')
+export const reqAllBrands=()=>ajax('/allbrands')
+
+//获取品牌数据
+export const reqBrand =()=>ajax('/brand')
+
+
+
